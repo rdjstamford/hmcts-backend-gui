@@ -6,3 +6,6 @@ requires:
 Python 3.11.8
 wxPython
 urllib3
+
+To run: 
+commandline: python main.py
