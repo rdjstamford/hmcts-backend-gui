@@ -147,7 +147,7 @@ class RightPanel(wx.Panel):
             self.text.WriteText("\n")
     
     def submitCase(self):
-        url = "http://localhost:4000/createProduct/"+self.text1.GetValue()+"/"+self.text2.GetValue()+"/"+self.text3.GetValue()+"/"+self.text4.GetValue()+"/"+self.text5.GetValue()
+        url = "http://localhost:4000/createCase/"+self.text1.GetValue()+"/"+self.text2.GetValue()+"/"+self.text3.GetValue()+"/"+self.text4.GetValue()+"/"+self.text5.GetValue()
         source = urllib.request.urlopen(url).read()
         self.console.SetLabelText("Case added.")
         self.resetFields()
@@ -169,7 +169,7 @@ class RightPanel(wx.Panel):
         self.Update()
     
     def update(self):
-        url = "http://localhost:4000/updateTask/"+str(self.dropdown.GetCurrentSelection()+1)+"/"+self.updateField.GetValue()
+        url = "http://localhost:4000/updateCase/"+str(self.dropdown.GetCurrentSelection()+1)+"/"+self.updateField.GetValue()
         source = urllib.request.urlopen(url).read()
         self.console.SetLabelText("Updated Status")
         self.updateField.Clear()
